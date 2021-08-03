@@ -25,7 +25,7 @@ function getBase64Image(img) {
         dataType: 'json',
         contentType: 'application/json',
         async: false,
-        data: JSON.stringify({ "test": bp64 }),
+        data: JSON.stringify({ "image": bp64, "selection": hyper, "n_attributes": n_attributes }),
         success: function (data) {
             let perceptron = data.TEST.models.perceptron
             let svm = data.TEST.models.svm
@@ -47,3 +47,8 @@ function getBase64Image(img) {
         }
     })
 }
+
+var loadFile = function(event) {
+	var image = document.getElementById('bp');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};

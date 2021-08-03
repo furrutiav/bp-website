@@ -44,10 +44,18 @@
         </div>
         <p>Hiperparámetros</p>
         <div class="hyper">
-            <button type="button" class="btn menubtn btn-outline-dark">K-Best</button>
-            <button type="button" class="btn menubtn btn-outline-dark">Lasso</button>
-            <button type="button" class="btn sqbtn btn-outline-dark">2</button>
-            <button type="button" class="btn sqbtn2">N# de atributos</button>
+            <button onclick="kbest()" type="button" class="btn menubtn btn-outline-dark" id="kbest">K-Best</button>
+            <button onclick="lasso()" type="button" class="btn menubtn btn-outline-dark" id="lasso">Lasso</button>
+                <SELECT class="atrib form-select btn sqbtn btn-outline-dark">
+                    <OPTION Value="1">1</OPTION>
+                    <OPTION Value="2">2</OPTION>
+                    <OPTION Value="3">3</OPTION>
+                    <OPTION Value="4">4</OPTION>
+                    <OPTION Value="5">5</OPTION>
+                </SELECT>
+            <button type="button" class="btn sqbtn2">
+                N# de atributos
+            </button>
         </div>
 
         <div class="problemContainer">
@@ -68,12 +76,8 @@
     </div>
 </body>
 
-<script src="./js/postbp_.js"></script>
-<script>
-var loadFile = function(event) {
-	var image = document.getElementById('bp');
-	image.src = URL.createObjectURL(event.target.files[0]);
-};
-</script>
+<script src="./js/hyper.js"></script>
+<script src="./js/postbp.js"></script>
+
 
 </html>
