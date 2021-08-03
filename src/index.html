@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/brands.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Bongard Problems</title>
+
+    <script src="./js/jquery.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="header">
+        <p>Hola</p>
+    </div>
+    <div class="content">
+        <h1> Bongard API </h1>
+        <p> Lorem ipsum dolor et sit amet </p>
+        <div class="menu">
+            <button type="button" class="btn menubtn btn-outline-dark">Dibujar Problema</button>
+            <button type="button" class="btn menubtn btn-outline-dark">
+                <input type="file" onchange="loadFile(event)" accept="image/gif, image/jpeg, image/png" name="image" id="file" style="display: none;">
+                <label for="file" style="cursor: pointer;">Subir Problema</label>
+            </button>
+
+            <button type="button" class="btn menubtn btn-outline-dark">Seleccionar Problema</button>
+            <button type="button" class="btn menubtn btn-outline-success"  onclick="postImage();">Procesar</button>
+
+
+            
+
+        </div>
+        <p>Hiperparámetros</p>
+        <div class="hyper">
+            <button type="button" class="btn menubtn btn-outline-dark">K-Best</button>
+            <button type="button" class="btn menubtn btn-outline-dark">Lasso</button>
+            <button type="button" class="btn sqbtn btn-outline-dark">2</button>
+            <button type="button" class="btn sqbtn2">N# de atributos</button>
+        </div>
+
+        <div class="problemContainer">
+            <div class="problem">
+                <img id="bp"/>
+            </div>
+        </div>
+        <p>Respuesta de la API</p>
+        <div class="atributos">
+            <p id="atributos">Atributo: </p>
+        </div>
+        <div class="scores">
+            <p id="scores">Perceptron: <br> SVM: <br> Decision Tree: <br>NB: <br> Dummy:</p>
+        </div>
+        <div class="score">
+            <p id="score">0<p>
+        </div>
+    </div>
+</body>
+
+<script src="./js/postbp_.js"></script>
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('bp');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+
+</html>
