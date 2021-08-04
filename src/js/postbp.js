@@ -36,7 +36,7 @@ function getBase64Image(img) {
             let scores = "Perceptron: " + perceptron + "<br>" + "SVM: " + svm + "<br>" + "NB: " + nb + "<br>" + "Dummy: " + dummy + "<br>" + "Decision Tree: " + dt;
             let atributos = "Atributos: "
             for (let i in solution){
-                atributos = atributos + solution[i] + " ";
+                atributos = atributos + "/ " solution[i] ;
             }
             let array1 = [perceptron,svm,nb,dummy,dt]
             let max = Math.max(...array1)
