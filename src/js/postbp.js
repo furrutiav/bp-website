@@ -2,7 +2,7 @@
 function postImage() {
     var bp = document.getElementById("bp")
     var apiurl = "https://bp-solver.herokuapp.com/"
-    var bp64= getBase64Image(bp)
+    var bp64= decodeURIComponent(getBase64Image(bp))
 
     post(bp64, apiurl)
 }
