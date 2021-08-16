@@ -25,20 +25,20 @@ function getBase64Image(img) {
         dataType: 'json',
         contentType: 'application/json',
         async: false,
-        data: JSON.stringify({ "image": bp64, "selection": hyper, "n_attributes": n_attributes }),
+        data: JSON.stringify({"image": bp64, "selection": hyper, "n_att": n_attributes}),
         success: function (data) {
-            let perceptron = data.TEST.models.perceptron
-            let svm = data.TEST.models.svm
-            let nb = data.TEST.models.NB
-            let dummy = data.TEST.models.dummy
-            let dt = data.TEST.models["Decision-Tree"]
-            let solution = data.TEST.solution
-            let scores = "Perceptron: " + perceptron + "<br>" + "SVM: " + svm + "<br>" + "NB: " + nb + "<br>" + "Dummy: " + dummy + "<br>" + "Decision Tree: " + dt;
+            let perceptron = data.solved.models.Perceptron
+            let svm = data.solved.models.SVC
+            let nb = data.solved.models.GaussianNB
+            let dummy = data.solved.models.DummyClassifier
+            let dt = data.solved.models.DecisionTreeClassifier
+            let solution = data.solved.solution
+            let scores = "Perceptron: " + perceptron + "<br>" + "SVC: " + svc + "<br>" + "GaussianNB: " + nb + "<br>"  + "<br>" + "DecisionTreeClassifier: " + dt + "DummyClassifier: " + dummy;
             let atributos = "Atributos: "
             for (let i in solution){
                 atributos = atributos + "/ " + solution[i] ;
             }
-            let array1 = [perceptron,svm,nb,dummy,dt]
+            let array1 = [perceptron,svm,nb,dt,dummy]
             let max = Math.max(...array1)
             $('#scores').html(scores)
             $('#atributos').html(atributos)
