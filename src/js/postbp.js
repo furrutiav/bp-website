@@ -27,13 +27,13 @@ function getBase64Image(img) {
         async: false,
         data: JSON.stringify({"image": bp64, "selection": hyper, "n_att": n_attributes}),
         success: function (data) {
-            let perceptron = data.solved.models.Perceptron
-            let svm = data.solved.models.SVC
-            let nb = data.solved.models.GaussianNB
-            let dummy = data.solved.models.DummyClassifier
-            let dt = data.solved.models.DecisionTreeClassifier
+            let perceptron = data.solved.Perceptron
+            let svm = data.solved.SVC
+            let nb = data.solved.GaussianNB
+            let dummy = data.solved.DummyClassifier
+            let dt = data.solved.DecisionTreeClassifier
             let solution = data.solved.solution
-            let scores = "Perceptron: " + perceptron + "<br>" + "SVC: " + svc + "<br>" + "GaussianNB: " + nb + "<br>"  + "<br>" + "DecisionTreeClassifier: " + dt + "DummyClassifier: " + dummy;
+            let scores = "Perceptron: " + perceptron + "<br>" + "SVC: " + svm + "<br>" + "GaussianNB: " + nb + "<br>"  + "DecisionTreeClassifier: " + dt + "<br>" + "DummyClassifier: " + dummy;
             let atributos = "Atributos: "
             for (let i in solution){
                 atributos = atributos + "/ " + solution[i] ;
