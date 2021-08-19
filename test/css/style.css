@@ -19,3 +19,9 @@
 .aligncenter {
     text-align: center;
 }
+
+.menubtn{
+    width:100%;
+    height: 1px;
+    margin:auto;
+}

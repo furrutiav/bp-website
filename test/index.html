@@ -44,19 +44,34 @@
                                  <td class="partdata">
                                      <div class="sectionButton">
                                          <a href="index.html"
-                                            style="font-size: 9.5px; color: rgb(200,200,200); font-weight:bold; opacity: 1.0">A1</a>
+                                            style="font-size: 15px; color: rgb(200,200,200); font-weight:bold; opacity: 1.0">Introducción</a>
                                      </div>
                                      <div class="sectionButton">
-                                         <a href="index.html" style="">INTRODUCTION</a>
+                                         <a href="index.html" style="">Problemas de Bongard</a>
+                                     </div>
+                                     <div class="sectionButton">
+                                         <a href="index.html" style="">Validez de un BP</a>
                                      </div>
                                  </td>
                                  <td class="partdata">
                                      <div class="sectionButton">
                                          <a href="index.html"
-                                            style="font-size: 9.5px; color: rgb(200,200,200); font-weight:bold; opacity: 1.0">A2</a>
+                                            style="font-size: 15px; color: rgb(200,200,200); font-weight:bold; opacity: 1.0">Metodologia</a>
                                      </div>
                                      <div class="sectionButton">
-                                         <a href="index.html" style="">INTRODUCTION</a>
+                                         <a href="index.html" style="max-width: 5px">Problema de Bongard <br/>como clasificación</a>
+                                     </div>
+                                 </td>
+                                <td class="partdata">
+                                     <div class="sectionButton">
+                                         <a class="ut-button" href="index.html"
+                                            style="font-size: 15px; color: rgb(200,200,200); font-weight:bold; opacity: 1.0">Resultados</a>
+                                     </div>
+                                     <div class="sectionButton">
+                                         <a href="index.html" style="max-width: 5px; text-align: justify;">BP Clase 0</a>
+                                     </div>
+                                     <div class="sectionButton">
+                                         <a href="index.html" style="max-width: 5px; text-align: justify;">BP Clase 1</a>
                                      </div>
                                  </td>
                              </tr>
@@ -86,14 +101,14 @@
         </table>
 
         <p>En el índice de Foundalis hay más de 394 problemas de dificultad creciente, con patrones difíciles de encontrar. Para este trabajo, se pondra atencion en los primeros 100 de estos problemas; originalmente propuestos como test para algoritmos de reconocimiento de patrones complejos en imagenes (ver apendice 3, del libro "Reconocimiento de Patrones" de M. Bongard).</p>
-        <h3>Validez de un BP</h3>
-        <p>No toda imagen de 12 celdas califica como un BP, existen ciertas reglas al respecto, las cuales resumo de las <a href="http://www.foundalis.com/res/invalBP.html" rel="nofollow">sugerencias de Foundalis</a>:</p>
+        <h2>Validez de un BP</h2>
+        <p>No toda imagen de 12 celdas califica como un BP, existen ciertas reglas al respecto, las cuales resumo de las <a href="http://www.foundalis.com/res/invalBP.html" target="_blank">sugerencias de Foundalis</a>:</p>
         <ul>
-        <li>La regla no puede depender de una <a href="https://es.wikipedia.org/wiki/Verdad_vacua" rel="nofollow">Verdad vacua</a> o de <a href="https://es.wikipedia.org/wiki/Introducci%C3%B3n_de_la_disyunci%C3%B3n" rel="nofollow">Introducción de la disyunción</a>. Esto es para evitar soluciones que puedan ser triviales</li>
+        <li>La regla no puede depender de una <a href="https://es.wikipedia.org/wiki/Verdad_vacua" target="_blank">Verdad vacua</a> o de <a href="https://es.wikipedia.org/wiki/Introducci%C3%B3n_de_la_disyunci%C3%B3n" target="_blank">Introducción de la disyunción</a>. Esto es para evitar soluciones que puedan ser triviales</li>
         <li>La regla que describe las 6 celdas de un lado no puede utilizar la posición de las celdas, solamente en su contenido. En particular, cualquier reordenamiento de las celdas de un lado preserva la solución del BP.</li>
         <li>Un BP se trata de propiedades geométricas y topológicas de los pixeles. En particular, una inteligencia que resuelva estos problemas no debe requerir conocimientos específicos de humanos, tales como culturales.</li>
         </ul>
-        <p>Más ejemplos de para esto están en la <a href="https://www.oebp.org/invalid.php" rel="nofollow">Enciclopedia de BP</a></p>
+        <p>Más ejemplos de para esto están en la <a href="https://www.oebp.org/invalid.php" target="_blank">Enciclopedia de BP</a></p>
         <p>Estas últimas dos consideraciones ayudan a plantear esto como un problema de Machine Learning, como se realizará en la sección de metodología, y cuyos algoritmos se implementan en este repositorio.</p>
     </div>
 </body>
